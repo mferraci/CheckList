@@ -1,0 +1,17 @@
+.background-image {
+
+    position: fixed;
+    left: -25px;
+    right: -25px;
+    z-index: -1;
+
+    background-image: url("../assets/plane02.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: block;
+
+    height: 100vh;
+
+    filter: blur(20px);
+}
