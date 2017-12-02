@@ -5,36 +5,47 @@ h1 {
     margin-top: 20px;
 }
 
+#timeline {
+    background-color: rgb(0,0,0, 0.7);
+    padding-top: 3em;
+    padding-bottom: 3em;
+    z-index: 1;
+}
+
 .container {
-    width: 90%;
-    margin: 100px auto; 
+    display: table;   /* Allow the centering to work */
+    
 }
-.progressbar {
-    counter-reset: step;
-}
+
 .progressbar li {
-    list-style-type: none;
-    width: 25%;
+    list-style: none;
     float: left;
+    width: 20%;
     font-size: 1.5em;
     position: relative;
-    text-align: center;
-    text-transform: uppercase;
     color: #fff;
+    text-align: center;
+    line-height: 60px;
 }
+
 .progressbar li:before {
+    /* Round element*/
     width: 60px;
     height: 60px;
     font-family: FontAwesome;
     content: ''; 
-    line-height: 60px;
     border: 2px solid #7d7d7d;
     display: block;
-    text-align: center;
     margin: 0 auto 10px auto;
-    border-radius: 50%;
+    border-radius: 50%;     
     background-color: white;
+
+    color: #7d7d7d;
+
+    position: relative;
+    z-index: 3;
 }
+
 .progressbar li:after {
     width: 100%;
     height: 10px;
@@ -43,18 +54,44 @@ h1 {
     background-color: #7d7d7d;
     top: 25px;
     left: -50%;
-    z-index: -1;
+    z-index: 2;
 }
+
 .progressbar li:first-child:after {
     content: none;
 }
+
+
+
 .progressbar li.active {
     color: green;
 }
 .progressbar li.active:before {
     border-color: #55b776;
-    content: "\f087"; 
+    color: green;
+    content: "\f00c"; 
 }
 .progressbar li.active + li:after {
     background-color: #55b776;
 }
+
+.progressbar li.mil-start:before {
+    content: "\f04b"; 
+}
+
+.progressbar li.mil-baseline:before {
+    content: "\f03a"; 
+}
+
+.progressbar li.mil-business:before {
+    content: "\f087"; 
+}
+
+.progressbar li.mil-cutover:before {
+    content: "\f021"; 
+}
+
+.progressbar li.mil-closure:before {
+    content: "\f11e"; 
+}
+
