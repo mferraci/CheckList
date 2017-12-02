@@ -5,12 +5,14 @@ import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawe
 
 import { AppComponent } from './app.component';
 import { HorizontalMenuComponent } from './horizontal-menu/horizontal-menu.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HorizontalMenuComponent
+    HorizontalMenuComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,
